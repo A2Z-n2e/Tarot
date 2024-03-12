@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body,html{
+            margin: 0;
+            padding: 0;
+        } */
+        body{
+            background: #f9f9f9;
+        }
+        .box{
+            width:200px;
+            height:200px;
+            background:#ccc;
+        }
+        .test{
+            width:200px;
+            height:200px;
+            background:salmon;
+        }
+        .maskBox{
+            width:200px;
+            height:200px;
+        }
+        .mask{
+            width:100%;
+            height:100%;
+            background-color:orange;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+<h1>基本知识：</h1>
+<p>原图：</p>
+<div class="box"></div>
+<p>矩形：10px 为到元素顶部的距离
+    20px 为到元素右边的距离
+    30px 为到元素底部的距离
+    40px 为到元素下边的距离</p>
+<div class="box" style="clip-path: inset(10px 20px 30px 40px);"></div>
+<p>圆形：60px为圆形的半径，at后面跟的是形状的位置，center代表居中</p>
+<div class="box" style="clip-path: circle(60px at center);"></div>
+<p>椭圆：60px为宽度，40px高度</p>
+<div class="box" style="clip-path: ellipse(60px 40px);"></div>
+<p>at后面跟的是形状的位置，75px：x偏移坐标，30px：y偏移坐标</p>
+<div class="box" style="clip-path: ellipse(60px 40px at 75px 30px);"></div>
+<p>多边形：以逗号风格的每两个参数代表着每个点的坐标，形成的图形为依次连接所有的点。可以像素，也可以百分比。</p>
+<div class="box" style="clip-path: polygon(5% 5%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);"></div>
+<h1>绘制常用图形：</h1>
+<p>等腰三角形：</p>
+<div class="test" style="clip-path: polygon(50% 0,100% 100%,0% 100%);"></div>
+<p>直角三角形：</p>
+<div class="test" style="clip-path: polygon(0% 0%,100% 0%,0% 100%);"></div>
+<p>等腰梯形：</p>
+<div class="test" style="clip-path: polygon(25% 0%,75% 0%,100% 100%,0% 100%);"></div>
+<p>斜角等腰梯形：（标签常用形状）</p>
+<div class="test" style="clip-path: polygon(50% 0%,100% 0%,0% 100%,0% 50%);"></div>
+<p>平行四边形：</p>
+<div class="test" style="clip-path: polygon(25% 0%,100% 0%,75% 100%,0% 100%);"></div>
+<p>菱形：</p>
+<div class="test" style="clip-path: polygon(50% 0%,100% 50%,50% 100%,0% 50%);"></div>
+
+<h1>其他知识：</h1>
+<p>1.反向裁剪思路，首先设置两层元素，上层元素裁剪成遮罩的元素，并且与背景色相似，这样就实现了反向裁剪。</p>
+<div class="maskBox" style="position:relative;">
+    <div class="mask"></div>
+    <div class="mask" style="clip-path: circle(60px at center);background-color:white;"></div>
+</div>
+<p></p>
+<div class="maskBox" style="position:relative;">
+    <div class="mask"></div>
+    <div class="mask" style="clip-path: ellipse(50% 50% at 50% 100%);;background-color:white;"></div>
+</div>
+<p>2.如果背景不是纯色背景，那么只能通过mask-image实现，本篇文章不做mask-image教程。</p>
+</body>
+</html>
