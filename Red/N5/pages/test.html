@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    /*移动至文字 - 音频*/
+    function PlaySound(sound_obj){
+        var this_sound = document.getElementById(sound_obj);
+        this_sound.play();
+    }
+    function StopSound(sound_obj){
+        var this_sound = document.getElementById(sound_obj);
+        this_sound.pause();
+        this_sound.currentTime = 0;
+    }
+</script>
+<style>
+    .hover-text{
+        color: #000;
+    }
+    .hover-text:hover{
+        color: red;
+    }
+    .hover-mean{
+        color: white;
+    }
+    .hover-mean:hover{
+        color: black;
+    }
+    .word_bold{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #title{
+        color: chartreuse;
+        text-align: center;
+        font-size: 30px;
+        text-shadow: 0 0 4px black;
+    }
+</style>
+<body>
+<!--标题-->
+<p id="title">
+    N5单词
+</p>
+<!--单词及释义-->
+<!--1.ああ-->
+<p>
+    <span class="hover-text word_bold"
+          onmouseover="PlaySound('00-001-1')"
+          onmouseout="StopSound('00-001-1')">
+        ああ
+    </span>
+      <span class="hover-mean">
+          &nbsp;&nbsp;①[叹]（极度感动或惊讶时发出的声音）啊，哎呀
+      </span>
+</p>
+<!--例句-->
+<p>
+    <span class="hover-text"
+          onmouseover="PlaySound('00-001-2')"
+          onmouseout="StopSound('00-001-2')">
+        &nbsp;&nbsp;&nbsp;&nbsp;ああ、ありがとうございます。
+    </span>
+    <span>
+        &nbsp;&nbsp;啊，太感谢了。
+    </span>
+</p>
+<p>
+    <span class="hover-text"
+          onmouseover="PlaySound('00-001-3')"
+          onmouseout="StopSound('00-001-3')">
+        &nbsp;&nbsp;&nbsp;&nbsp;ああ、<span title="おどろ">驚</span>きました。
+    </span>
+    <span>
+        &nbsp;&nbsp;哎呀，吓坏了。
+    </span>
+</p>
+<!--2.アイスクリーム(ice cream)-->
+<p>
+        <span class="hover-text word_bold"
+              onmouseover="PlaySound('00-002-1')"
+              onmouseout="StopSound('00-002-1')">
+            アイスクリーム(ice cream)
+        </span>
+    <span class="hover-mean">
+        &nbsp;&nbsp;⑤[名]冰激凌
+    </span>
+</p>
+<p>
+    <span class="hover-text"
+          onmouseover="PlaySound('00-002-2')"
+          onmouseout="StopSound('00-002-2')">
+        &nbsp;&nbsp;&nbsp;&nbsp;<span title="おいしい">美味しい</span>アイスクリーム
+    </span>
+    <span>
+        &nbsp;&nbsp;好吃的冰激凌
+    </span>
+</p>
+<p>
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;相关</span>
+    <span class="hover-text"
+          onmouseover="PlaySound('00-002-3')"
+          onmouseout="StopSound('00-002-3')">
+        &nbsp;&nbsp;&nbsp;&nbsp;クリーム(cream)
+    </span>
+    <span class="hover-mean">
+        &nbsp;&nbsp;②[名]奶油，乳脂；(化妆品的)乳霜
+    </span>
+</p>
+<!--3.会う-->
+<p>
+        <span class="hover-text word_bold"
+              onmouseover="PlaySound('00-003-1')"
+              onmouseout="StopSound('00-003-1')">
+            <span title="あう">会う</span>
+        </span>
+    <span class="hover-mean">
+        &nbsp;&nbsp;①[自动1]见面，会见；偶遇，碰见
+    </span>
+</p>
+<p>
+    <span class="hover-text"
+          onmouseover="PlaySound('00-003-2')"
+          onmouseout="StopSound('00-003-2')">
+        &nbsp;&nbsp;&nbsp;&nbsp;<span title="せんせい">先生</span>に<span title="あ">会う</span>。
+    </span>
+    <span>
+        &nbsp;&nbsp;见老师。
+    </span>
+</p>
+<p>
+    <span class="hover-text"
+          onmouseover="PlaySound('00-003-3')"
+          onmouseout="StopSound('00-003-3')">
+        &nbsp;&nbsp;&nbsp;&nbsp;<span title="ぎんこう">銀行</span>で<span title="ともだち">友達</span>に<span title="あ">あ</span>った。
+    </span>
+    <span>
+        &nbsp;&nbsp;在银行偶遇朋友。
+    </span>
+</p>
+<p>
+    <span>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span>同音</span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="hover-text"
+              onmouseover="PlaySound('00-003-4')"
+              onmouseout="StopSound('00-003-4')"
+              title="あう">遭う(あう)</span>
+    </span>
+    <span class="hover-mean">
+        &nbsp;&nbsp;①[自动1]遭遇，遭到
+    </span>
+</p>
+<p>
+    <span class="hover-text"
+          onmouseover="PlaySound('00-003-5')"
+          onmouseout="StopSound('00-003-5')">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span title="あう">合う</span>(あう)
+    </span>
+    <span class="hover-mean">
+        &nbsp;&nbsp;①[自动1]符合，一致；合适；协调
+    </span>
+</p>
+
+
+<!--音频-->
+<audio id="00-001-1" src="../audios/00-001-1.mp3"></audio>
+<audio id="00-001-2" src="../audios/00-001-2.mp3"></audio>
+<audio id="00-001-3" src="../audios/00-001-3.mp3"></audio>
+<audio id="00-002-1" src="../audios/00-002-1.mp3"></audio>
+<audio id="00-002-2" src="../audios/00-002-2.mp3"></audio>
+<audio id="00-002-3" src="../audios/00-002-3.mp3"></audio>
+<audio id="00-003-1" src="../audios/00-003-1.mp3"></audio>
+<audio id="00-003-2" src="../audios/00-003-2.mp3"></audio>
+<audio id="00-003-3" src="../audios/00-003-3.mp3"></audio>
+<audio id="00-003-4" src="../audios/00-003-4.mp3"></audio>
+<audio id="00-003-5" src="../audios/00-003-5.mp3"></audio>
+</body>
+</html>
