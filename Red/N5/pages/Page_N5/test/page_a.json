@@ -2,71 +2,101 @@
   {
     "word": "苹果",
     "interpretation": "一种常见的水果",
-    "interpretation_2": "富含维生素C",
-    "audio_path_1": "audio/apple_1.mp3",
-    "audio_path_2": "audio/apple_2.mp3"
+    "interpretation_2": "",
+    "interpretation_3": "",
+    "interpretation_4": "",
+    "interpretation_5": "",
+    "audio_path_1": "../../../audios/00-001-2.mp3",
+    "audio_path_2": "../../../audios/00-001-2.mp3"
   },
   {
     "word": "香蕉",
-    "interpretation": "长条形的水果",
+    "interpretation": "长条形的黄色水果",
     "interpretation_2": "",
-    "audio_path_1": "audio/banana_1.mp3",
-    "audio_path_2": ""
+    "interpretation_3": "",
+    "interpretation_4": "",
+    "interpretation_5": "",
+    "audio_path_1": "audio/banana_name.mp3",
+    "audio_path_2": "audio/banana_interpretation.mp3"
   },
   {
     "word": "橙子",
-    "interpretation": "圆形的水果",
-    "interpretation_2": "富含维生素C",
-    "audio_path_1": "",
-    "audio_path_2": "audio/orange_2.mp3"
+    "interpretation": "圆形的橙色水果",
+    "interpretation_2": "",
+    "interpretation_3": "",
+    "interpretation_4": "",
+    "interpretation_5": "",
+    "audio_path_1": "audio/orange_name.mp3",
+    "audio_path_2": "audio/orange_interpretation.mp3"
   },
   {
     "word": "葡萄",
-    "interpretation": "小而圆的水果",
+    "interpretation": "小型的紫色或绿色水果",
     "interpretation_2": "",
-    "audio_path_1": "audio/grape_1.mp3",
-    "audio_path_2": ""
+    "interpretation_3": "",
+    "interpretation_4": "",
+    "interpretation_5": "",
+    "audio_path_1": "audio/grape_name.mp3",
+    "audio_path_2": "audio/grape_interpretation.mp3"
   },
   {
     "word": "西瓜",
-    "interpretation": "大型的水果",
+    "interpretation": "大型的绿色水果",
     "interpretation_2": "",
-    "audio_path_1": "",
-    "audio_path_2": ""
-  },
-  {
-    "word": "梨",
-    "interpretation": "形状像梨的水果",
-    "interpretation_2": "",
-    "audio_path_1": "",
-    "audio_path_2": ""
-  },
-  {
-    "word": "桃子",
-    "interpretation": "粉红色的水果",
-    "interpretation_2": "",
-    "audio_path_1": "",
-    "audio_path_2": ""
+    "interpretation_3": "",
+    "interpretation_4": "",
+    "interpretation_5": "",
+    "audio_path_1": "audio/watermelon_name.mp3",
+    "audio_path_2": "audio/watermelon_interpretation.mp3"
   },
   {
     "word": "草莓",
-    "interpretation": "红色的小果实",
+    "interpretation": "小型的红色水果",
     "interpretation_2": "",
-    "audio_path_1": "",
-    "audio_path_2": ""
+    "interpretation_3": "",
+    "interpretation_4": "",
+    "interpretation_5": "",
+    "audio_path_1": "audio/strawberry_name.mp3",
+    "audio_path_2": "audio/strawberry_interpretation.mp3"
   },
   {
     "word": "蓝莓",
-    "interpretation": "蓝色的小果实",
+    "interpretation": "小型的蓝色水果",
     "interpretation_2": "",
-    "audio_path_1": "",
-    "audio_path_2": ""
+    "interpretation_3": "",
+    "interpretation_4": "",
+    "interpretation_5": "",
+    "audio_path_1": "audio/blueberry_name.mp3",
+    "audio_path_2": "audio/blueberry_interpretation.mp3"
+  },
+  {
+    "word": "梨",
+    "interpretation": "圆形的黄色水果",
+    "interpretation_2": "",
+    "interpretation_3": "",
+    "interpretation_4": "",
+    "interpretation_5": "",
+    "audio_path_1": "audio/pear_name.mp3",
+    "audio_path_2": "audio/pear_interpretation.mp3"
+  },
+  {
+    "word": "桃子",
+    "interpretation": "圆形的粉红色水果",
+    "interpretation_2": "",
+    "interpretation_3": "",
+    "interpretation_4": "",
+    "interpretation_5": "",
+    "audio_path_1": "audio/peach_name.mp3",
+    "audio_path_2": "audio/peach_interpretation.mp3"
   },
   {
     "word": "芒果",
-    "interpretation": "黄色的水果",
+    "interpretation": "大型的黄色水果",
     "interpretation_2": "",
-    "audio_path_1": "",
-    "audio_path_2": ""
+    "interpretation_3": "",
+    "interpretation_4": "",
+    "interpretation_5": "",
+    "audio_path_1": "audio/mango_name.mp3",
+    "audio_path_2": "audio/mango_interpretation.mp3"
   }
 ]

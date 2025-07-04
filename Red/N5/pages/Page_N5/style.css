@@ -3,6 +3,7 @@
     text-align: center;
     font-size: 30px;
     text-shadow: 0 0 4px black;
+    margin-bottom: 100px;
 }
 /*单词*/
 .word {
@@ -12,12 +13,14 @@
     cursor: pointer;
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 .word:hover{
     color: red;
     margin-right: 40px;
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 /*单词释义*/
 .interpretation {
@@ -25,9 +28,11 @@
     display: inline-block;
     cursor: pointer;
     font-size: 20px;
+    margin-bottom: 20px;
 }
 .interpretation:hover {
     color: black;
+    margin-bottom: 20px;
 }
 
 
@@ -36,7 +41,7 @@
     display: inline-block;
     margin-right: 40px;
     margin-left: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 /*例句释义_1*/
@@ -44,13 +49,13 @@
     display: inline-block;
     color: white;
     cursor: pointer;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 .e_1_i:hover {
     color: black;
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 /*例句_2*/
@@ -58,20 +63,20 @@
     display: inline-block;
     margin-right: 40px;
     margin-left: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 .e_2_i {
     display: inline-block;
     color: white;
     cursor: pointer;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 .e_2_i:hover {
     color: black;
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 /*例句_3*/
@@ -79,20 +84,20 @@
     display: inline-block;
     margin-right: 40px;
     margin-left: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 .e_3_i {
     display: inline-block;
     color: white;
     cursor: pointer;
-    margin-bottom: 5px;
+    margin-bottom:20px;
     font-size: 20px;
 }
 .e_3_i:hover {
     color: black;
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 /*例句_4*/
@@ -100,20 +105,20 @@
     display: inline-block;
     margin-right: 40px;
     margin-left: 20px;
-    margin-bottom: 5px;
+    margin-bottom:20px;
     font-size: 20px;
 }
 .e_4_i {
     display: inline-block;
     color: white;
     cursor: pointer;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 .e_4_i:hover {
     color: black;
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 /*例句_5*/
@@ -121,20 +126,20 @@
     display: inline-block;
     margin-right: 40px;
     margin-left: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 .e_5_i {
     display: inline-block;
     color: white;
     cursor: pointer;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 .e_5_i:hover {
     color: black;
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 
@@ -143,7 +148,7 @@
     display: inline-block;
     margin-right: 40px;
     margin-left: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 /*danci释义_1*/
@@ -151,12 +156,12 @@
     display: inline-block;
     color: white;
     cursor: pointer;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 .w_1_i:hover {
     color: black;
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 /*单词_2*/
@@ -164,20 +169,20 @@
     display: inline-block;
     margin-right: 40px;
     margin-left: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 .w_2_i {
     display: inline-block;
     color: white;
     cursor: pointer;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 .w_2_i:hover {
     color: black;
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 /*单词_3*/
@@ -185,20 +190,20 @@
     display: inline-block;
     margin-right: 40px;
     margin-left: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 .w_3_i {
     display: inline-block;
     color: white;
     cursor: pointer;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 .w_3_i:hover {
     color: black;
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 /*单词_4*/
@@ -206,20 +211,20 @@
     display: inline-block;
     margin-right: 40px;
     margin-left: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 .w_4_i {
     display: inline-block;
     color: white;
     cursor: pointer;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 .w_4_i:hover {
     color: black;
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 /*单词_5*/
@@ -227,18 +232,18 @@
     display: inline-block;
     margin-right: 40px;
     margin-left: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 .w_5_i {
     display: inline-block;
     color: white;
     cursor: pointer;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 .w_5_i:hover {
     color: black;
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }

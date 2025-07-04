@@ -3,58 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <title>水果信息展示</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">    <!--引入css文件-->
     <style></style>
 </head>
 <body>
-<p id="title">
-    N5单词
+<p id="title">  <!--标题-->
+    N5单词 - あ
 </p>
-<div id="content"></div>
-
-
+<div id="content"></div>    <!--输出id内容-->
 
 
 <script>
-    fetch('page_1.json')
+    fetch('page_1.json')    //引入json文件
         .then(response => response.json())
         .then(data => {
-            const contentDiv = document.getElementById('content');
+            const contentDiv = document.getElementById('content');  //整体设置的id - content
             const div = document.createElement('div');
             data.forEach(item => {
                 //单词
                 const wordSpan = document.createElement('span');
                 wordSpan.className = 'word';
                 wordSpan.textContent = item.word;
-                wordSpan.addEventListener('mouseover', () => {
-                    new Audio(item.audio).play();
+                wordSpan.innerHTML = item.word  //提示词
+                    .replace(/朝/g, '<span title="あさ">朝</span>')
+                    .replace(/上/g, '<span title="あ">上</span>')
+                    .replace(/開/g, '<span title="あ">開</span>')
+                    .replace(/秋/g, '<span title="あき">秋</span>')
+                    .replace(/明/g, '<span title="あか">明</span>')
+                    .replace(/赤/g, '<span title="あか">赤</span>')
+                    .replace(/青/g, '<span title="あお">青</span>')
+                    .replace(/会/g, '<span title="あ">会</span>')
+                    .replace(/朝/g, '<span title="あさ">朝</span>');
+                wordSpan.addEventListener('mouseenter', () => {
+                    const audio = new Audio(item.audio);
+                    audio.play();
+                    audio.currentTime = 0;  //避免重复播放
+                });
+                wordSpan.addEventListener('mouseleave', () => {
+                    const audio = new Audio(item.audio);
+                    audio.pause();
+                    audio.currentTime = 0;
                 });
                 contentDiv.appendChild(wordSpan);
                 //释义
                 const interpretationSpan = document.createElement('span');
                 interpretationSpan.className = 'interpretation';
                 interpretationSpan.textContent = item.interpretation;
-                /*contentDiv.appendChild(interpretationSpan);*/
-                if (item.interpretation){
+                if (item.interpretation) {   //避免无内容输出时叠加 margin-left:20px;
                     contentDiv.appendChild(interpretationSpan);
-                    contentDiv.appendChild(document.createElement('br'));
+                    contentDiv.appendChild(document.createElement('br'));   //行末内容，换行处理
                 }
 
                 //例句_1
                 const example_1Span = document.createElement('span');
                 example_1Span.className = 'example_1';
                 example_1Span.textContent = item.example_1;
-                example_1Span.addEventListener('mouseover', () => {
-                    new Audio(item.a_e_1).play();
+                example_1Span.innerHTML = item.example_1
+                    .replace(/美味/g, '<span title="おい">美味</span>')
+                    .replace(/先生/g, '<span title="せんせい">先生</span>')
+                    .replace(/会/g, '<span title="あ">会</span>')
+                    .replace(/海/g, '<span title="うみ">海</span>')
+                    .replace(/青/g, '<span title="あお">青</span>')
+                    .replace(/空/g, '<span title="そら">空</span>')
+                    .replace(/赤/g, '<span title="あか">赤</span>')
+                    .replace(/止/g, '<span title="と">止</span>')
+                    .replace(/顔/g, '<span title="かお">顔</span>')
+                    .replace(/明/g, '<span title="あか">明</span>')
+                    .replace(/教室/g, '<span title="きょうしつ">教室</span>')
+                    .replace(/開/g, '<span title="あ">開</span>')
+                    .replace(/窓/g, '<span title="まど">窓</span>')
+                    .replace(/手/g, '<span title="て">手</span>')
+                    .replace(/上/g, '<span title="あ">上</span>')
+                    .replace(/朝/g, '<span title="あさ">朝</span>')
+                    .replace(/七/g, '<span title="しち">七</span>')
+                    .replace(/時/g, '<span title="じ">時</span>')
+                    .replace(/起/g, '<span title="お">起</span>');
+                example_1Span.addEventListener('mouseenter', () => {
+                    const audio = new Audio(item.a_e_1);
+                    audio.play();
+                    audio.currentTime = 0;
                 });
-                contentDiv.appendChild(example_1Span);
+                example_1Span.addEventListener('mouseleave', () => {
+                    const audio = new Audio(item.a_e_1);
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+                if (item.a_e_1) {
+                    contentDiv.appendChild(example_1Span);
+                }
                 //例句_1释义
                 const e_1_iSpan = document.createElement('span');
                 e_1_iSpan.className = 'e_1_i';
                 e_1_iSpan.textContent = item.e_1_i;
-                /*contentDiv.appendChild(e_1_iSpan);
-                contentDiv.appendChild(document.createElement('br'));*/
-                if (item.e_1_i){
+                if (item.e_1_i) {
                     contentDiv.appendChild(e_1_iSpan);
                     contentDiv.appendChild(document.createElement('br'));
                 }
@@ -63,17 +104,44 @@
                 const example_2Span = document.createElement('span');
                 example_2Span.className = 'example_2';
                 example_2Span.innerHTML = item.example_2
-                    .replace(/驚/g, '<span title="おどろ">驚</span>');
-                example_2Span.addEventListener('mouseover', () => {
-                    new Audio(item.a_e_2).play();
+                    .replace(/驚/g, '<span title="おどろ">驚</span>')
+                    .replace(/銀行/g, '<span title="ぎんこう">銀行</span>')
+                    .replace(/友連/g, '<span title="ともだち">友連</span>')
+                    .replace(/会/g, '<span title="あ">会</span>')
+                    .replace(/青/g, '<span title="あお">青</span>')
+                    .replace(/渡/g, '<span title="わた">渡</span>')
+                    .replace(/顔/g, '<span title="かお">顔</span>')
+                    .replace(/赤/g, '<span title="あか">赤</span>')
+                    .replace(/信号/g, '<span title="しんごう">信号</span>')
+                    .replace(/林檎/g, '<span title="りんご">林檎</span>')
+                    .replace(/明/g, '<span title="あか">明</span>')
+                    .replace(/性格/g, '<span title="せいかく">性格</span>')
+                    .replace(/店/g, '<span title="みせ">店</span>')
+                    .replace(/朝/g, '<span title="あさ">朝</span>')
+                    .replace(/時/g, '<span title="じ">時</span>')
+                    .replace(/開/g, '<span title="あ">開</span>')
+                    .replace(/教科書/g, '<span title="きょうかしょ">教科書</span>')
+                    .replace(/値段/g, '<span title="ねだん">値段</span>')
+                    .replace(/上/g, '<span title="あ">上</span>')
+                    .replace(/飯/g, '<span title="はん">飯</span>');
+                example_2Span.addEventListener('mouseenter', () => {
+                    const audio = new Audio(item.a_e_2);
+                    audio.play();
+                    audio.currentTime = 0;
                 });
-                contentDiv.appendChild(example_2Span);
-                                const e_2_iSpan = document.createElement('span');
+                example_2Span.addEventListener('mouseleave', () => {
+                    const audio = new Audio(item.a_e_2);
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+                if (item.a_e_2) {
+                    contentDiv.appendChild(example_2Span);
+                }
+
+                const e_2_iSpan = document.createElement('span');
                 e_2_iSpan.className = 'e_2_i';
                 e_2_iSpan.textContent = item.e_2_i;
-                /*contentDiv.appendChild(e_2_iSpan);
-                contentDiv.appendChild(document.createElement('br'));*/
-                if (item.e_2_i){
+                if (item.e_2_i) {
                     contentDiv.appendChild(e_2_iSpan);
                     contentDiv.appendChild(document.createElement('br'));
                 }
@@ -82,16 +150,32 @@
                 const example_3Span = document.createElement('span');
                 example_3Span.className = 'example_3';
                 example_3Span.textContent = item.example_3;
-                example_3Span.addEventListener('mouseover', () => {
-                    new Audio(item.a_e_3).play();
+                example_3Span.innerHTML = item.example_3
+                    .replace(/明/g, '<span title="あか">明</span>')
+                    .replace(/未来/g, '<span title="みらい">未来</span>')
+                    .replace(/商店/g, '<span title="しょうてん">商店</span>')
+                    .replace(/開/g, '<span title="あ">開</span>')
+                    .replace(/母/g, '<span title="はは">母</span>')
+                    .replace(/上/g, '<span title="あ">上</span>')
+                    .replace(/飯/g, '<span title="はん">飯</span>')
+                    .replace(/午/g, '<span title="ご">午</span>');
+                example_3Span.addEventListener('mouseenter', () => {
+                    const audio = new Audio(item.a_e_3);
+                    audio.play();
+                    audio.currentTime = 0;
                 });
-                contentDiv.appendChild(example_3Span);
-                                const e_3_iSpan = document.createElement('span');
+                example_3Span.addEventListener('mouseleave', () => {
+                    const audio = new Audio(item.a_e_3);
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+                if (item.a_e_3) {
+                    contentDiv.appendChild(example_3Span);
+                }
+                const e_3_iSpan = document.createElement('span');
                 e_3_iSpan.className = 'e_3_i';
                 e_3_iSpan.textContent = item.e_3_i;
-                /*contentDiv.appendChild(e_3_iSpan);
-                contentDiv.appendChild(document.createElement('br'));*/
-                if (item.e_3_i){
+                if (item.e_3_i) {
                     contentDiv.appendChild(e_3_iSpan);
                     contentDiv.appendChild(document.createElement('br'));
                 }
@@ -100,16 +184,25 @@
                 const example_4Span = document.createElement('span');
                 example_4Span.className = 'example_4';
                 example_4Span.textContent = item.example_4;
-                example_4Span.addEventListener('mouseover', () => {
-                    new Audio(item.a_e_4).play();
+                example_4Span.innerHTML = item.example_4
+                    .replace(/夜/g, '<span title="よる">夜</span>');
+                example_4Span.addEventListener('mouseenter', () => {
+                    const audio = new Audio(item.a_e_4);
+                    audio.play();
+                    audio.currentTime = 0;
                 });
-                contentDiv.appendChild(example_4Span);
-                                const e_4_iSpan = document.createElement('span');
+                example_4Span.addEventListener('mouseleave', () => {
+                    const audio = new Audio(item.a_e_4);
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+                if (item.a_e_4) {
+                    contentDiv.appendChild(example_4Span);
+                }
+                const e_4_iSpan = document.createElement('span');
                 e_4_iSpan.className = 'e_4_i';
                 e_4_iSpan.textContent = item.e_4_i;
-                /*contentDiv.appendChild(e_4_iSpan);
-                contentDiv.appendChild(document.createElement('br'));*/
-                if (item.e_4_i){
+                if (item.e_4_i) {
                     contentDiv.appendChild(e_4_iSpan);
                     contentDiv.appendChild(document.createElement('br'));
                 }
@@ -118,16 +211,23 @@
                 const example_5Span = document.createElement('span');
                 example_5Span.className = 'example_5';
                 example_5Span.textContent = item.example_5;
-                example_5Span.addEventListener('mouseover', () => {
-                    new Audio(item.a_e_5).play();
+                example_5Span.addEventListener('mouseenter', () => {
+                    const audio = new Audio(item.a_e_5);
+                    audio.play();
+                    audio.currentTime = 0;
                 });
-                contentDiv.appendChild(example_5Span);
-                                const e_5_iSpan = document.createElement('span');
+                example_5Span.addEventListener('mouseleave', () => {
+                    const audio = new Audio(item.a_e_5);
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+                if (item.a_e_5) {
+                    contentDiv.appendChild(example_5Span);
+                }
+                const e_5_iSpan = document.createElement('span');
                 e_5_iSpan.className = 'e_5_i';
                 e_5_iSpan.textContent = item.e_5_i;
-                /*contentDiv.appendChild(e_5_iSpan);
-                contentDiv.appendChild(document.createElement('br'));*/
-                if (item.e_5_i){
+                if (item.e_5_i) {
                     contentDiv.appendChild(e_5_iSpan);
                     contentDiv.appendChild(document.createElement('br'));
                 }
@@ -136,16 +236,30 @@
                 const word_1Span = document.createElement('span');
                 word_1Span.className = 'word_1';
                 word_1Span.textContent = item.word_1;
-                word_1Span.addEventListener('mouseover', () => {
-                    new Audio(item.a_w_1).play();
+                word_1Span.innerHTML = item.word_1
+                    .replace(/遭/g, '<span title="あ">遭</span>')
+                    .replace(/暗/g, '<span title="くら">暗</span>')
+                    .replace(/春/g, '<span title="はる">春</span>')
+                    .replace(/閉/g, '<span title="し">閉</span>')
+                    .replace(/揚/g, '<span title="あ">揚</span>')
+                    .replace(/昼/g, '<span title="ひる">昼</span>');
+                word_1Span.addEventListener('mouseenter', () => {
+                    const audio = new Audio(item.a_w_1);
+                    audio.play();
+                    audio.currentTime = 0;
                 });
-                contentDiv.appendChild(word_1Span);
-                                const w_1_iSpan = document.createElement('span');
+                word_1Span.addEventListener('mouseleave', () => {
+                    const audio = new Audio(item.a_w_1);
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+                if (item.word_1) {
+                    contentDiv.appendChild(word_1Span);
+                }
+                const w_1_iSpan = document.createElement('span');
                 w_1_iSpan.className = 'w_1_i';
                 w_1_iSpan.textContent = item.w_1_i;
-                /*contentDiv.appendChild(w_1_iSpan);
-                contentDiv.appendChild(document.createElement('br'));*/
-                if (item.w_1_i){
+                if (item.w_1_i) {
                     contentDiv.appendChild(w_1_iSpan);
                     contentDiv.appendChild(document.createElement('br'));
                 }
@@ -154,17 +268,27 @@
                 const word_2Span = document.createElement('span');
                 word_2Span.className = 'word_2';
                 word_2Span.innerHTML = item.word_2
-                    .replace(/驚/g, '<span title="おどろ">驚</span>');
-                word_2Span.addEventListener('mouseover', () => {
-                    new Audio(item.a_w_2).play();
+                    .replace(/合/g, '<span title="あ">合</span>')
+                    .replace(/暗/g, '<span title="くら">暗</span>')
+                    .replace(/夏/g, '<span title="なつ">夏</span>')
+                    .replace(/挙/g, '<span title="あ">挙</span>');
+                word_2Span.addEventListener('mouseenter', () => {
+                    const audio = new Audio(item.a_w_2);
+                    audio.play();
+                    audio.currentTime = 0;
                 });
-                contentDiv.appendChild(word_2Span);
-                                const w_2_iSpan = document.createElement('span');
+                word_2Span.addEventListener('mouseleave', () => {
+                    const audio = new Audio(item.a_w_2);
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+                if (item.word_2) {
+                    contentDiv.appendChild(word_2Span);
+                }
+                const w_2_iSpan = document.createElement('span');
                 w_2_iSpan.className = 'w_2_i';
                 w_2_iSpan.textContent = item.w_2_i;
-                /*contentDiv.appendChild(w_2_iSpan);
-                contentDiv.appendChild(document.createElement('br'));*/
-                if (item.w_2_i){
+                if (item.w_2_i) {
                     contentDiv.appendChild(w_2_iSpan);
                     contentDiv.appendChild(document.createElement('br'));
                 }
@@ -173,16 +297,25 @@
                 const word_3Span = document.createElement('span');
                 word_3Span.className = 'word_3';
                 word_3Span.textContent = item.word_3;
-                word_3Span.addEventListener('mouseover', () => {
-                    new Audio(item.a_w_3).play();
+                word_3Span.innerHTML = item.word_3
+                    .replace(/冬/g, '<span title="ふゆ">冬</span>');
+                word_3Span.addEventListener('mouseenter', () => {
+                    const audio = new Audio(item.a_w_3);
+                    audio.play();
+                    audio.currentTime = 0;
                 });
-                contentDiv.appendChild(word_3Span);
-                                const w_3_iSpan = document.createElement('span');
+                word_3Span.addEventListener('mouseleave', () => {
+                    const audio = new Audio(item.a_w_3);
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+                if (item.word_3) {
+                    contentDiv.appendChild(word_3Span);
+                }
+                const w_3_iSpan = document.createElement('span');
                 w_3_iSpan.className = 'w_3_i';
                 w_3_iSpan.textContent = item.w_3_i;
-                /*contentDiv.appendChild(w_3_iSpan);
-                contentDiv.appendChild(document.createElement('br'));*/
-                if (item.w_3_i){
+                if (item.w_3_i) {
                     contentDiv.appendChild(w_3_iSpan);
                     contentDiv.appendChild(document.createElement('br'));
                 }
@@ -191,16 +324,23 @@
                 const word_4Span = document.createElement('span');
                 word_4Span.className = 'word_4';
                 word_4Span.textContent = item.word_4;
-                word_4Span.addEventListener('mouseover', () => {
-                    new Audio(item.a_w_4).play();
+                word_4Span.addEventListener('mouseenter', () => {
+                    const audio = new Audio(item.a_w_4);
+                    audio.play();
+                    audio.currentTime = 0;
                 });
-                contentDiv.appendChild(word_4Span);
+                word_4Span.addEventListener('mouseleave', () => {
+                    const audio = new Audio(item.a_w_4);
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+                if (item.word_4) {
+                    contentDiv.appendChild(word_4Span);
+                }
                 const w_4_iSpan = document.createElement('span');
                 w_4_iSpan.className = 'w_4_i';
                 w_4_iSpan.textContent = item.w_4_i;
-                /*contentDiv.appendChild(w_4_iSpan);
-                contentDiv.appendChild(document.createElement('br'));*/
-                if (item.w_4_i){
+                if (item.w_4_i) {
                     contentDiv.appendChild(w_4_iSpan);
                     contentDiv.appendChild(document.createElement('br'));
                 }
@@ -209,30 +349,27 @@
                 const word_5Span = document.createElement('span');
                 word_5Span.className = 'word_5';
                 word_5Span.textContent = item.word_5;
-                word_5Span.addEventListener('mouseover', () => {
-                    new Audio(item.a_w_5).play();
+                word_5Span.addEventListener('mouseenter', () => {
+                    const audio = new Audio(item.a_w_5)
+                    audio.play();
+                    audio.currentTime = 0;
                 });
-                contentDiv.appendChild(word_5Span);
+                word_5Span.addEventListener('mouseout', () => {
+                    const audio = new Audio(item.a_w_5)
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+                if (item.word_5) {
+                    contentDiv.appendChild(word_5Span);
+                }
                 const w_5_iSpan = document.createElement('span');
                 w_5_iSpan.className = 'w_5_i';
                 w_5_iSpan.textContent = item.w_5_i;
-                /*contentDiv.appendChild(w_5_iSpan);
-                contentDiv.appendChild(document.createElement('br'));
-                contentDiv.appendChild(document.createElement('br'));*/
-                if (item.w_5_i){
+                if (item.w_5_i) {
                     contentDiv.appendChild(w_5_iSpan);
                     contentDiv.appendChild(document.createElement('br'));
                 }
-
-
-                contentDiv.appendChild(document.createElement('br'));
-
-
-
-                /*contentDiv.appendChild(div);*/
-                /*contentDiv.appendChild(document.createElement('br'));*/
-
-
+                contentDiv.appendChild(document.createElement('br'));   //单词内容末，固定换行
             });
         })
         .catch(error => console.error('Error loading JSON:', error));

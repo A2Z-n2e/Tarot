@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <title>JSON数据展示</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水果信息展示</title>
     <style>
-        .name {
+        .word {
             color: black;
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 4px;
         }
-        .name:hover {
+        .word:hover {
             color: red;
         }
         .interpretation {
             color: white;
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 4px;
+            white-space: pre-line;
         }
         .interpretation:hover {
             color: black;
@@ -21,98 +29,54 @@
 <body>
 <div id="content"></div>
 
-<script type="text/javascript">
-    // 假设json数据已经加载到变量jsonData中
-    var jsonData = [
-        {
-            "word": "苹果",
-            "interpretation": "一种常见的水果",
-            "interpretation_2": "",
-            "interpretation_3": "",
-            "interpretation_4": "",
-            "interpretation_5": "",
-            "audio_path_1": "audio/apple.mp3",
-            "audio_path_2": "audio/apple_interpretation.mp3"
-        },
-        {
-            "word": "香蕉",
-            "interpretation": "长条形的黄色水果",
-            "interpretation_2": "",
-            "interpretation_3": "",
-            "interpretation_4": "",
-            "interpretation_5": "",
-            "audio_path_1": "audio/banana.mp3",
-            "audio_path_2": ""
-        },
-        {
-            // 其他数据...
-        }
-    ];
-
-    function createContent(data) {
-        var contentDiv = document.getElementById('content');
-        data.forEach(function(item) {
-            var div = document.createElement('div');
-
-            var nameSpan = document.createElement('span');
-            nameSpan.className = 'name';
-            nameSpan.textContent = item.word;
-            var interpretationSpan = document.createElement('span');
-            interpretationSpan.className = 'interpretation';
-            interpretationSpan.textContent = ' ' + item.interpretation;
-            // 添加title属性
-            if (item.interpretation.includes('水')) {
-                interpretationSpan.setAttribute('title', 'shui');
-            }
-            if (item.interpretation.includes('果')) {
-                interpretationSpan.setAttribute('title', 'guo');
-            }
-            // 添加音频播放功能
-            nameSpan.addEventListener('mouseenter', function() {
-                if (item.audio_path_1) {
-                    var audio = new Audio(item.audio_path_1);
+<script>
+    fetch('page_a.json')
+        .then(response => response.json())
+        .then(data => {
+            const contentDiv = document.getElementById('content');
+            data.forEach(item => {
+                const wordSpan = document.createElement('span');
+                wordSpan.className = 'word';
+                wordSpan.textContent = item.word;
+                wordSpan.addEventListener('mouseenter', () => {
+                    const audio = new Audio(item.audio_path_1);
                     audio.play();
-                }
-            });
-            interpretationSpan.addEventListener('mouseenter', function() {
-                if (item.audio_path_2) {
-                    var audio = new Audio(item.audio_path_2);
+                });
+                wordSpan.addEventListener('mouseleave', () => {
+                    const audio = new Audio(item.audio_path_1);
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+
+                const interpretationSpan = document.createElement('span');
+                interpretationSpan.className = 'interpretation';
+                interpretationSpan.textContent = item.interpretation;
+                interpretationSpan.addEventListener('mouseenter', () => {
+                    const audio = new Audio(item.audio_path_2);
                     audio.play();
-                }
+                });
+                interpretationSpan.addEventListener('mouseleave', () => {
+                    const audio = new Audio(item.audio_path_2);
+                    audio.pause();
+                    audio.currentTime = 0;
+                });
+
+                // 添加title属性提示词
+                interpretationSpan.innerHTML = interpretationSpan.innerHTML.replace(/水/g, '<span title="shui">水</span>');
+                interpretationSpan.innerHTML = interpretationSpan.innerHTML.replace(/果/g, '<span title="guo">果</span>');
+
+                contentDiv.appendChild(wordSpan);
+                contentDiv.appendChild(interpretationSpan);
+
+                // 添加换行
+                if (item.interpretation) contentDiv.appendChild(document.createElement('br'));
+                if (item.interpretation_2) contentDiv.appendChild(document.createElement('br'));
+                if (item.interpretation_3) contentDiv.appendChild(document.createElement('br'));
+                if (item.interpretation_4) contentDiv.appendChild(document.createElement('br'));
+                if (item.interpretation_5) contentDiv.appendChild(document.createElement('br'));
             });
-
-            div.appendChild(nameSpan);
-
-            if (item.interpretation) {
-                div.appendChild(interpretationSpan);
-                div.appendChild(document.createElement('br'));
-            }
-
-            if (item.interpretation_2) {
-                div.appendChild(document.createTextNode(item.interpretation_2));
-                div.appendChild(document.createElement('br'));
-            }
-
-            if (item.interpretation_3) {
-                div.appendChild(document.createTextNode(item.interpretation_3));
-                div.appendChild(document.createElement('br'));
-            }
-
-            if (item.interpretation_4) {
-                div.appendChild(document.createTextNode(item.interpretation_4));
-                div.appendChild(document.createElement('br'));
-            }
-
-            if (item.interpretation_5) {
-                div.appendChild(document.createTextNode(item.interpretation_5));
-                div.appendChild(document.createElement('br'));
-            }
-
-            contentDiv.appendChild(div);
-        });
-    }
-
-    createContent(jsonData);
+        })
+        .catch(error => console.error('Error loading JSON:', error));
 </script>
 </body>
 </html>
