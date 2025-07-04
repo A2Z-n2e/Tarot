@@ -1,0 +1,62 @@
+[
+  {
+    "word": "苹果",
+    "interpretation": "一种常见的水果，通常呈红色或绿色。",
+    "audio_path_1": "../audios/00-001-1.mp3",
+    "audio_path_2": "../audios/00-001-2.mp3"
+  },
+  {
+    "word": "香蕉",
+    "interpretation": "一种长形的黄色水果，富含钾。",
+    "audio_path_1": "audio/banana_1.mp3",
+    "audio_path_2": "audio/banana_2.mp3"
+  },
+  {
+    "word": "橙子",
+    "interpretation": "一种圆形的橙色水果，富含维生素C。",
+    "audio_path_1": "audio/orange_1.mp3",
+    "audio_path_2": "audio/orange_2.mp3"
+  },
+  {
+    "word": "葡萄",
+    "interpretation": "一种小型的紫色或绿色水果，通常成串生长。",
+    "audio_path_1": "audio/grape_1.mp3",
+    "audio_path_2": "audio/grape_2.mp3"
+  },
+  {
+    "word": "草莓",
+    "interpretation": "一种红色的小型水果，表面有细小的种子。",
+    "audio_path_1": "audio/strawberry_1.mp3",
+    "audio_path_2": "audio/strawberry_2.mp3"
+  },
+  {
+    "word": "西瓜",
+    "interpretation": "一种大型的绿色水果，内部多汁。",
+    "audio_path_1": "audio/watermelon_1.mp3",
+    "audio_path_2": "audio/watermelon_2.mp3"
+  },
+  {
+    "word": "梨",
+    "interpretation": "一种圆形或椭圆形的水果，表面光滑。",
+    "audio_path_1": "audio/pear_1.mp3",
+    "audio_path_2": "audio/pear_2.mp3"
+  },
+  {
+    "word": "桃子",
+    "interpretation": "一种圆形的水果，表面有毛。",
+    "audio_path_1": "audio/peach_1.mp3",
+    "audio_path_2": "audio/peach_2.mp3"
+  },
+  {
+    "word": "李子",
+    "interpretation": "一种小型的紫色或黄色水果。",
+    "audio_path_1": "audio/plum_1.mp3",
+    "audio_path_2": "audio/plum_2.mp3"
+  },
+  {
+    "word": "蓝莓",
+    "interpretation": "一种小型的蓝色水果，富含抗氧化剂。",
+    "audio_path_1": "audio/blueberry_1.mp3",
+    "audio_path_2": "audio/blueberry_2.mp3"
+  }
+]

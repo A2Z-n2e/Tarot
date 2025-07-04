@@ -109,6 +109,11 @@
     </span>
 </p>
 
+
+注释：
+<span title="ともだち">友達</span>
+
+
 音频导入：
 <audio id="00-001-1" src="../audios/00-001-1.mp3"></audio>
 <audio id="00-001-2" src="../audios/00-001-2.mp3"></audio>

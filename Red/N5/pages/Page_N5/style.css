@@ -1,0 +1,244 @@
+#title{
+    color: grey;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 0 0 4px black;
+}
+/*单词*/
+.word {
+    color: black;
+    display: inline-block;
+    margin-right: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+.word:hover{
+    color: red;
+    margin-right: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+/*单词释义*/
+.interpretation {
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 20px;
+}
+.interpretation:hover {
+    color: black;
+}
+
+
+/*例句_1*/
+.example_1 {
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+/*例句释义_1*/
+.e_1_i {
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.e_1_i:hover {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/*例句_2*/
+.example_2 {
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.e_2_i {
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.e_2_i:hover {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/*例句_3*/
+.example_3 {
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.e_3_i {
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.e_3_i:hover {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/*例句_4*/
+.example_4 {
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.e_4_i {
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.e_4_i:hover {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/*例句_5*/
+.example_5 {
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.e_5_i {
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.e_5_i:hover {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+
+/*单词_1*/
+.word_1 {
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+/*danci释义_1*/
+.w_1_i {
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.w_1_i:hover {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/*单词_2*/
+.word_2 {
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.w_2_i {
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.w_2_i:hover {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/*单词_3*/
+.word_3 {
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.w_3_i {
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.w_3_i:hover {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/*单词_4*/
+.word_4 {
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.w_4_i {
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.w_4_i:hover {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/*单词_5*/
+.word_5 {
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.w_5_i {
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.w_5_i:hover {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5px;
+}

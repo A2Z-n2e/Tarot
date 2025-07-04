@@ -1,0 +1,72 @@
+[
+  {
+    "word": "苹果",
+    "interpretation": "一种常见的水果",
+    "interpretation_2": "富含维生素C",
+    "audio_path_1": "audio/apple_1.mp3",
+    "audio_path_2": "audio/apple_2.mp3"
+  },
+  {
+    "word": "香蕉",
+    "interpretation": "长条形的水果",
+    "interpretation_2": "",
+    "audio_path_1": "audio/banana_1.mp3",
+    "audio_path_2": ""
+  },
+  {
+    "word": "橙子",
+    "interpretation": "圆形的水果",
+    "interpretation_2": "富含维生素C",
+    "audio_path_1": "",
+    "audio_path_2": "audio/orange_2.mp3"
+  },
+  {
+    "word": "葡萄",
+    "interpretation": "小而圆的水果",
+    "interpretation_2": "",
+    "audio_path_1": "audio/grape_1.mp3",
+    "audio_path_2": ""
+  },
+  {
+    "word": "西瓜",
+    "interpretation": "大型的水果",
+    "interpretation_2": "",
+    "audio_path_1": "",
+    "audio_path_2": ""
+  },
+  {
+    "word": "梨",
+    "interpretation": "形状像梨的水果",
+    "interpretation_2": "",
+    "audio_path_1": "",
+    "audio_path_2": ""
+  },
+  {
+    "word": "桃子",
+    "interpretation": "粉红色的水果",
+    "interpretation_2": "",
+    "audio_path_1": "",
+    "audio_path_2": ""
+  },
+  {
+    "word": "草莓",
+    "interpretation": "红色的小果实",
+    "interpretation_2": "",
+    "audio_path_1": "",
+    "audio_path_2": ""
+  },
+  {
+    "word": "蓝莓",
+    "interpretation": "蓝色的小果实",
+    "interpretation_2": "",
+    "audio_path_1": "",
+    "audio_path_2": ""
+  },
+  {
+    "word": "芒果",
+    "interpretation": "黄色的水果",
+    "interpretation_2": "",
+    "audio_path_1": "",
+    "audio_path_2": ""
+  }
+]

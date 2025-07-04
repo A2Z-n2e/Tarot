@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>水果信息展示</title>
+    <link rel="stylesheet" href="style.css">
+    <style></style>
+</head>
+<body>
+<p id="title">
+    N5单词
+</p>
+<div id="content"></div>
+
+
+
+
+<script>
+    fetch('page_1.json')
+        .then(response => response.json())
+        .then(data => {
+            const contentDiv = document.getElementById('content');
+            const div = document.createElement('div');
+            data.forEach(item => {
+                //单词
+                const wordSpan = document.createElement('span');
+                wordSpan.className = 'word';
+                wordSpan.textContent = item.word;
+                wordSpan.addEventListener('mouseover', () => {
+                    new Audio(item.audio).play();
+                });
+                contentDiv.appendChild(wordSpan);
+                //释义
+                const interpretationSpan = document.createElement('span');
+                interpretationSpan.className = 'interpretation';
+                interpretationSpan.textContent = item.interpretation;
+                /*contentDiv.appendChild(interpretationSpan);*/
+                if (item.interpretation){
+                    contentDiv.appendChild(interpretationSpan);
+                    contentDiv.appendChild(document.createElement('br'));
+                }
+
+                //例句_1
+                const example_1Span = document.createElement('span');
+                example_1Span.className = 'example_1';
+                example_1Span.textContent = item.example_1;
+                example_1Span.addEventListener('mouseover', () => {
+                    new Audio(item.a_e_1).play();
+                });
+                contentDiv.appendChild(example_1Span);
+                //例句_1释义
+                const e_1_iSpan = document.createElement('span');
+                e_1_iSpan.className = 'e_1_i';
+                e_1_iSpan.textContent = item.e_1_i;
+                /*contentDiv.appendChild(e_1_iSpan);
+                contentDiv.appendChild(document.createElement('br'));*/
+                if (item.e_1_i){
+                    contentDiv.appendChild(e_1_iSpan);
+                    contentDiv.appendChild(document.createElement('br'));
+                }
+
+                //例句_2
+                const example_2Span = document.createElement('span');
+                example_2Span.className = 'example_2';
+                example_2Span.innerHTML = item.example_2
+                    .replace(/驚/g, '<span title="おどろ">驚</span>');
+                example_2Span.addEventListener('mouseover', () => {
+                    new Audio(item.a_e_2).play();
+                });
+                contentDiv.appendChild(example_2Span);
+                                const e_2_iSpan = document.createElement('span');
+                e_2_iSpan.className = 'e_2_i';
+                e_2_iSpan.textContent = item.e_2_i;
+                /*contentDiv.appendChild(e_2_iSpan);
+                contentDiv.appendChild(document.createElement('br'));*/
+                if (item.e_2_i){
+                    contentDiv.appendChild(e_2_iSpan);
+                    contentDiv.appendChild(document.createElement('br'));
+                }
+
+                //例句_3
+                const example_3Span = document.createElement('span');
+                example_3Span.className = 'example_3';
+                example_3Span.textContent = item.example_3;
+                example_3Span.addEventListener('mouseover', () => {
+                    new Audio(item.a_e_3).play();
+                });
+                contentDiv.appendChild(example_3Span);
+                                const e_3_iSpan = document.createElement('span');
+                e_3_iSpan.className = 'e_3_i';
+                e_3_iSpan.textContent = item.e_3_i;
+                /*contentDiv.appendChild(e_3_iSpan);
+                contentDiv.appendChild(document.createElement('br'));*/
+                if (item.e_3_i){
+                    contentDiv.appendChild(e_3_iSpan);
+                    contentDiv.appendChild(document.createElement('br'));
+                }
+
+                //例句_4
+                const example_4Span = document.createElement('span');
+                example_4Span.className = 'example_4';
+                example_4Span.textContent = item.example_4;
+                example_4Span.addEventListener('mouseover', () => {
+                    new Audio(item.a_e_4).play();
+                });
+                contentDiv.appendChild(example_4Span);
+                                const e_4_iSpan = document.createElement('span');
+                e_4_iSpan.className = 'e_4_i';
+                e_4_iSpan.textContent = item.e_4_i;
+                /*contentDiv.appendChild(e_4_iSpan);
+                contentDiv.appendChild(document.createElement('br'));*/
+                if (item.e_4_i){
+                    contentDiv.appendChild(e_4_iSpan);
+                    contentDiv.appendChild(document.createElement('br'));
+                }
+
+                //例句_5
+                const example_5Span = document.createElement('span');
+                example_5Span.className = 'example_5';
+                example_5Span.textContent = item.example_5;
+                example_5Span.addEventListener('mouseover', () => {
+                    new Audio(item.a_e_5).play();
+                });
+                contentDiv.appendChild(example_5Span);
+                                const e_5_iSpan = document.createElement('span');
+                e_5_iSpan.className = 'e_5_i';
+                e_5_iSpan.textContent = item.e_5_i;
+                /*contentDiv.appendChild(e_5_iSpan);
+                contentDiv.appendChild(document.createElement('br'));*/
+                if (item.e_5_i){
+                    contentDiv.appendChild(e_5_iSpan);
+                    contentDiv.appendChild(document.createElement('br'));
+                }
+
+                //单词_1
+                const word_1Span = document.createElement('span');
+                word_1Span.className = 'word_1';
+                word_1Span.textContent = item.word_1;
+                word_1Span.addEventListener('mouseover', () => {
+                    new Audio(item.a_w_1).play();
+                });
+                contentDiv.appendChild(word_1Span);
+                                const w_1_iSpan = document.createElement('span');
+                w_1_iSpan.className = 'w_1_i';
+                w_1_iSpan.textContent = item.w_1_i;
+                /*contentDiv.appendChild(w_1_iSpan);
+                contentDiv.appendChild(document.createElement('br'));*/
+                if (item.w_1_i){
+                    contentDiv.appendChild(w_1_iSpan);
+                    contentDiv.appendChild(document.createElement('br'));
+                }
+
+                //单词_2
+                const word_2Span = document.createElement('span');
+                word_2Span.className = 'word_2';
+                word_2Span.innerHTML = item.word_2
+                    .replace(/驚/g, '<span title="おどろ">驚</span>');
+                word_2Span.addEventListener('mouseover', () => {
+                    new Audio(item.a_w_2).play();
+                });
+                contentDiv.appendChild(word_2Span);
+                                const w_2_iSpan = document.createElement('span');
+                w_2_iSpan.className = 'w_2_i';
+                w_2_iSpan.textContent = item.w_2_i;
+                /*contentDiv.appendChild(w_2_iSpan);
+                contentDiv.appendChild(document.createElement('br'));*/
+                if (item.w_2_i){
+                    contentDiv.appendChild(w_2_iSpan);
+                    contentDiv.appendChild(document.createElement('br'));
+                }
+
+                //单词_3
+                const word_3Span = document.createElement('span');
+                word_3Span.className = 'word_3';
+                word_3Span.textContent = item.word_3;
+                word_3Span.addEventListener('mouseover', () => {
+                    new Audio(item.a_w_3).play();
+                });
+                contentDiv.appendChild(word_3Span);
+                                const w_3_iSpan = document.createElement('span');
+                w_3_iSpan.className = 'w_3_i';
+                w_3_iSpan.textContent = item.w_3_i;
+                /*contentDiv.appendChild(w_3_iSpan);
+                contentDiv.appendChild(document.createElement('br'));*/
+                if (item.w_3_i){
+                    contentDiv.appendChild(w_3_iSpan);
+                    contentDiv.appendChild(document.createElement('br'));
+                }
+
+                //单词_4
+                const word_4Span = document.createElement('span');
+                word_4Span.className = 'word_4';
+                word_4Span.textContent = item.word_4;
+                word_4Span.addEventListener('mouseover', () => {
+                    new Audio(item.a_w_4).play();
+                });
+                contentDiv.appendChild(word_4Span);
+                const w_4_iSpan = document.createElement('span');
+                w_4_iSpan.className = 'w_4_i';
+                w_4_iSpan.textContent = item.w_4_i;
+                /*contentDiv.appendChild(w_4_iSpan);
+                contentDiv.appendChild(document.createElement('br'));*/
+                if (item.w_4_i){
+                    contentDiv.appendChild(w_4_iSpan);
+                    contentDiv.appendChild(document.createElement('br'));
+                }
+
+                //单词_5
+                const word_5Span = document.createElement('span');
+                word_5Span.className = 'word_5';
+                word_5Span.textContent = item.word_5;
+                word_5Span.addEventListener('mouseover', () => {
+                    new Audio(item.a_w_5).play();
+                });
+                contentDiv.appendChild(word_5Span);
+                const w_5_iSpan = document.createElement('span');
+                w_5_iSpan.className = 'w_5_i';
+                w_5_iSpan.textContent = item.w_5_i;
+                /*contentDiv.appendChild(w_5_iSpan);
+                contentDiv.appendChild(document.createElement('br'));
+                contentDiv.appendChild(document.createElement('br'));*/
+                if (item.w_5_i){
+                    contentDiv.appendChild(w_5_iSpan);
+                    contentDiv.appendChild(document.createElement('br'));
+                }
+
+
+                contentDiv.appendChild(document.createElement('br'));
+
+
+
+                /*contentDiv.appendChild(div);*/
+                /*contentDiv.appendChild(document.createElement('br'));*/
+
+
+            });
+        })
+        .catch(error => console.error('Error loading JSON:', error));
+</script>
+</body>
+</html>
